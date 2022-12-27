@@ -1,0 +1,42 @@
+//
+// AtomMatrix.h
+//
+
+#pragma once
+
+#include <stdint.h>
+
+enum LEDChar {
+	LEDCHAR_EXCLAMATION = 16,
+	LEDCHAR_QUESTION,
+	LEDCHAR_3DOTS,
+	LEDCHAR_LEFT,
+	LEDCHAR_RIGHT,
+	LEDCHAR_UP,
+	LEDCHAR_DOWN,
+	LEDCHAR_TURN_LEFT,
+	LEDCHAR_TURN_RIGHT,
+	LEDCHAR_FORWARD,
+	LEDCHAR_BACKWARD,
+	LEDCHAR_OK_S,
+	LEDCHAR_OK_L,
+	LEDCHAR_NG_S,
+	LEDCHAR_NG_L,
+	LEDCHAR_SCAN,
+	LEDCHAR_ROTATE = LEDCHAR_SCAN,
+	LEDCHAR_ROTATE_LEFT,
+	LEDCHAR_ROTATE_RIGHT,
+	LEDCHAR_PAUSE,
+	LED_CHAR_COUNT
+};
+
+const uint32_t CRGB_RED = 0xFF0000;
+const uint32_t CRGB_GREEN = 0x00FF00;
+const uint32_t CRGB_BLUE = 0x0000FF;
+const uint32_t CRGB_YELLOW = 0xFFFF00;
+const uint32_t CRGB_CYAN = 0x00FFFF;
+const uint32_t CRGB_MAGENTA = 0xFF00FF;
+const uint32_t CRGB_WHITE = 0xFFFFFF;
+const uint32_t CRGB_GRAY = 0x808080;
+
+void drawLEDChar(int index, uint32_t rgb, int shiftX = 0, int shiftY = 0);
